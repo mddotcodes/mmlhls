@@ -2,10 +2,11 @@
 # MediaMTX configuration (template)
 #
 # This file is processed by src/server.js at startup:
-# the __PUBLISH_USER__ line is replaced with a publish-auth
-# block derived from the STREAM_KEY environment variable, and
-# the resolved config is written to a temp file that MediaMTX
-# is started with. Do not run MediaMTX with this file directly.
+# the PUBLISH_USER placeholder (below, in the authInternalUsers
+# section) is replaced with a publish-auth block derived from the
+# STREAM_KEY environment variable, and the resolved config is written
+# to a temp file that MediaMTX is started with.
+# Do not run MediaMTX with this file directly.
 ###############################################
 
 logLevel: info
@@ -18,6 +19,7 @@ playback: no
 rtsp: no
 webrtc: no
 srt: no
+moq: no
 
 ###############################################
 # RTMP ingest (OBS publishes here)
@@ -35,7 +37,11 @@ hlsAlwaysRemux: yes
 hlsSegmentCount: 7
 hlsSegmentDuration: 1s
 hlsPartDuration: 200ms
-hlsAllowOrigin: '*'
+hlsAllowOrigins: ["*"]
+# The Node HLS proxy authenticates with this secret (Authorization: Bearer),
+# which disables MediaMTX's per-viewer HLS session system (cookie redirects
+# that break behind a path-prefix proxy). Generated at startup by server.js.
+hlsCDNSecret: __HLS_CDN_SECRET__
 
 ###############################################
 # Authentication

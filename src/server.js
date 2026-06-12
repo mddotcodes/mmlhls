@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import crypto from "node:crypto";
 import fs from "node:fs";
 import http from "node:http";
 import os from "node:os";
@@ -38,6 +39,11 @@ const mmlWebSocketUrl = `${publicUrl.replace(/^http/, "ws")}/mml`;
 const HLS_INTERNAL_HOST = "127.0.0.1";
 const HLS_INTERNAL_PORT = 8888;
 
+// Shared secret between the HLS proxy and MediaMTX. Sending it as a Bearer
+// token marks the proxy as a "CDN", which disables MediaMTX's per-viewer HLS
+// session system (cookie/302 redirects that break behind a path prefix).
+const hlsCdnSecret = crypto.randomBytes(32).toString("hex");
+
 // --- MediaMTX (RTMP ingest -> LL-HLS) ----------------------------------------
 
 function resolveMediaMtxBinary() {
@@ -70,10 +76,12 @@ function buildMediaMtxConfig() {
       "      - action: publish",
     ].join("\n");
   }
-  if (!template.includes("__PUBLISH_USER__")) {
-    throw new Error("mediamtx.yml is missing the __PUBLISH_USER__ placeholder");
+  if (!template.includes("__PUBLISH_USER__") || !template.includes("__HLS_CDN_SECRET__")) {
+    throw new Error("mediamtx.yml is missing a required placeholder");
   }
-  return template.replace("__PUBLISH_USER__", publishUser);
+  return template
+    .replace("__PUBLISH_USER__", publishUser)
+    .replace("__HLS_CDN_SECRET__", hlsCdnSecret);
 }
 
 function startMediaMtx() {
@@ -155,7 +163,11 @@ app.use("/hls", (req, res) => {
       port: HLS_INTERNAL_PORT,
       path: req.url,
       method: req.method,
-      headers: { ...req.headers, host: `${HLS_INTERNAL_HOST}:${HLS_INTERNAL_PORT}` },
+      headers: {
+        ...req.headers,
+        host: `${HLS_INTERNAL_HOST}:${HLS_INTERNAL_PORT}`,
+        authorization: `Bearer ${hlsCdnSecret}`,
+      },
     },
     (proxyRes) => {
       res.writeHead(proxyRes.statusCode ?? 502, proxyRes.headers);

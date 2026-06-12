@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MML Live Stream</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #12151d;
+      --surface-2: #181c27;
+      --border: #232936;
+      --text: #e6e9f0;
+      --muted: #8b93a7;
+      --accent: #6ea8ff;
+      --green: #3ddc84;
+      --red: #ff5d5d;
+      --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); margin: 0 0 28px; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 999px; padding: 6px 14px; font-size: 14px; margin-bottom: 28px;
+    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+    .status.live .dot { background: var(--green); box-shadow: 0 0 8px var(--green); }
+    .status.offline .dot { background: var(--red); }
+    section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 22px 24px; margin-bottom: 20px;
+    }
+    h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
+    .field { margin-bottom: 14px; }
+    .field:last-child { margin-bottom: 0; }
+    .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 5px; }
+    .value {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 9px 12px;
+    }
+    .value code { font-family: var(--mono); font-size: 13.5px; word-break: break-all; flex: 1; color: var(--accent); }
+    .copy {
+      flex-shrink: 0; background: transparent; border: 1px solid var(--border);
+      color: var(--muted); border-radius: 6px; padding: 4px 10px;
+      font-size: 12px; cursor: pointer; transition: all 0.15s;
+    }
+    .copy:hover { color: var(--text); border-color: var(--muted); }
+    ol { margin: 0; padding-left: 22px; }
+    ol li { margin-bottom: 10px; }
+    ol li:last-child { margin-bottom: 0; }
+    code.inline { font-family: var(--mono); font-size: 13.5px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    td { padding: 7px 0; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { color: var(--muted); width: 42%; padding-right: 16px; }
+    .note { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
+    .note strong { color: var(--text); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>MML Live Stream</h1>
+  <p class="subtitle">OBS → RTMP → low-latency HLS → networked <code class="inline">&lt;m-video&gt;</code></p>
+
+  <div class="status" id="status"><span class="dot"></span><span id="status-text">Checking stream…</span></div>
+
+  <section>
+    <h2>Connection URLs</h2>
+    <div class="field">
+      <label>Networked MML document (add this to Otherside / your world)</label>
+      <div class="value"><code id="ws-url">…</code><button class="copy" data-copy="ws-url">Copy</button></div>
+    </div>
+    <div class="field">
+      <label>HLS playlist (what the m-video plays)</label>
+      <div class="value"><code id="hls-url">…</code><button class="copy" data-copy="hls-url">Copy</button></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>OBS Setup — Stream</h2>
+    <ol>
+      <li>Open <strong>Settings → Stream</strong> and set <strong>Service</strong> to <code class="inline">Custom…</code></li>
+      <li>
+        <div class="field">
+          <label>Server</label>
+          <div class="value"><code id="obs-server">…</code><button class="copy" data-copy="obs-server">Copy</button></div>
+        </div>
+      </li>
+      <li>
+        <div class="field">
+          <label>Stream Key</label>
+          <div class="value"><code id="obs-key">…</code><button class="copy" data-copy="obs-key">Copy</button></div>
+        </div>
+        <span class="note" id="key-note"></span>
+      </li>
+      <li>Click <strong>Start Streaming</strong>. The stream appears in the MML document within a few seconds.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>OBS Setup — Output (recommended)</h2>
+    <table>
+      <tr><td>Output mode</td><td>Advanced</td></tr>
+      <tr><td>Encoder</td><td>x264 (or your GPU encoder)</td></tr>
+      <tr><td>Rate control</td><td>CBR</td></tr>
+      <tr><td>Bitrate</td><td>3000–4000 kbps</td></tr>
+      <tr><td>Keyframe interval</td><td><strong>2 s</strong> (important for HLS latency)</td></tr>
+      <tr><td>Preset / tune</td><td>veryfast, tune <code class="inline">zerolatency</code></td></tr>
+      <tr><td>Resolution</td><td>1280×720 or 1920×1080, 30 fps</td></tr>
+      <tr><td>Audio</td><td>AAC, 128 kbps</td></tr>
+    </table>
+    <p class="note">The server remuxes without transcoding — whatever OBS sends is what viewers get, so keep the bitrate moderate.</p>
+  </section>
+</main>
+
+<script>
+  let hlsUrl = null;
+
+  async function loadInfo() {
+    const res = await fetch("/api/info");
+    const info = await res.json();
+    hlsUrl = info.hlsUrl;
+    document.getElementById("ws-url").textContent = info.mmlWebSocketUrl;
+    document.getElementById("hls-url").textContent = info.hlsUrl;
+    document.getElementById("obs-server").textContent = info.obsServer;
+    document.getElementById("obs-key").textContent = info.obsStreamKey;
+    document.getElementById("key-note").textContent = info.streamKeyConfigured
+      ? "Replace <STREAM_KEY> with the STREAM_KEY value configured on the server."
+      : "No stream key is configured (STREAM_KEY env var is unset) — publishing is open.";
+  }
+
+  async function pollStatus() {
+    const el = document.getElementById("status");
+    const text = document.getElementById("status-text");
+    if (!hlsUrl) return;
+    try {
+      const res = await fetch("/hls/live/index.m3u8", { method: "GET", cache: "no-store" });
+      const live = res.ok;
+      el.classList.toggle("live", live);
+      el.classList.toggle("offline", !live);
+      text.textContent = live ? "Live" : "Offline — waiting for OBS";
+    } catch {
+      el.classList.remove("live");
+      el.classList.add("offline");
+      text.textContent = "Offline — waiting for OBS";
+    }
+  }
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(".copy");
+    if (!button) return;
+    const value = document.getElementById(button.dataset.copy).textContent;
+    navigator.clipboard.writeText(value).then(() => {
+      button.textContent = "Copied";
+      setTimeout(() => (button.textContent = "Copy"), 1200);
+    });
+  });
+
+  loadInfo().then(pollStatus);
+  setInterval(pollStatus, 5000);
+</script>
+</body>
+</html>

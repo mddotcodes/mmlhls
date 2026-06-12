@@ -1,0 +1,19 @@
+{
+  "name": "mml-hls-stream-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mini service serving a low-latency HLS live stream (via MediaMTX) and a networked MML document with m-video",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "fetch-mediamtx": "node scripts/fetch-mediamtx.js"
+  },
+  "dependencies": {
+    "@mml-io/networked-dom-server": "0.26.1",
+    "express": "5.2.1",
+    "ws": "8.21.0"
+  }
+}

@@ -1,0 +1,55 @@
+###############################################
+# MediaMTX configuration (template)
+#
+# This file is processed by src/server.js at startup:
+# the __PUBLISH_USER__ line is replaced with a publish-auth
+# block derived from the STREAM_KEY environment variable, and
+# the resolved config is written to a temp file that MediaMTX
+# is started with. Do not run MediaMTX with this file directly.
+###############################################
+
+logLevel: info
+
+# Servers we don't use
+api: no
+metrics: no
+pprof: no
+playback: no
+rtsp: no
+webrtc: no
+srt: no
+
+###############################################
+# RTMP ingest (OBS publishes here)
+rtmp: yes
+rtmpAddress: :1935
+
+###############################################
+# Low-Latency HLS output (consumed via the Node HLS proxy)
+hls: yes
+hlsAddress: 127.0.0.1:8888
+hlsVariant: lowLatency
+# Start generating the HLS stream as soon as a publisher connects,
+# so the first viewer doesn't have to wait for muxer startup.
+hlsAlwaysRemux: yes
+hlsSegmentCount: 7
+hlsSegmentDuration: 1s
+hlsPartDuration: 200ms
+hlsAllowOrigin: '*'
+
+###############################################
+# Authentication
+authInternalUsers:
+  # Reading (HLS playback) is public - Otherside clients fetch the m3u8 anonymously
+  - user: any
+    pass:
+    ips: []
+    permissions:
+      - action: read
+__PUBLISH_USER__
+
+###############################################
+# Stream paths
+paths:
+  live:
+    source: publisher

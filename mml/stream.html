@@ -1,1 +1,389 @@
-<m-video src="{{HLS_URL}}" y="1.856" sx="3" sy="3" sz="3"></m-video>
+<!-- CINEMA - Stylized Movie Theatre -->
+<!-- v10.17_FINAL: Audio baked into video src, m-audio tags removed, screen emissive pushed to 15.0 -->
+
+<m-group id="cinema-building" sx="5" sy="5" sz="5">
+
+    <!-- GROUND -->
+    <m-cube color="#555555" width="16" height="0.5" depth="18" x="0" y="-0.15" z="0"></m-cube>
+  
+    <!-- BUILDING BODY -->
+    <m-cube color="#1a1a2e" width="12.4" height="6.7" depth="0.3" x="0" y="3.35" z="-7"></m-cube>
+    <m-cube color="#1a1a2e" width="0.3" height="6.7" depth="14.2" x="-6" y="3.35" z="0"></m-cube>
+    <m-cube color="#1a1a2e" width="0.3" height="6.7" depth="14.2" x="6" y="3.35" z="0"></m-cube>
+    <m-cube color="#1a1a2e" width="3.5" height="6.7" depth="0.3" x="-4.25" y="3.35" z="7"></m-cube>
+    <m-cube color="#1a1a2e" width="3.5" height="6.7" depth="0.3" x="4.25" y="3.35" z="7"></m-cube>
+    <m-cube color="#1a1a2e" width="5" height="3.2" depth="0.3" x="0" y="5.1" z="7"></m-cube>
+  
+    <!-- MARQUEE -->
+    <m-cube color="#f5e6c8" width="12.4" height="2.5" depth="0.2" x="0" y="7.75" z="7.05"></m-cube>
+    <m-cube color="#f5e6c8" width="0.2" height="2.5" depth="14.1" x="-6.1" y="7.75" z="0"></m-cube>
+    <m-cube color="#f5e6c8" width="0.2" height="2.5" depth="14.1" x="6.1" y="7.75" z="0"></m-cube>
+    <m-cube color="#f5e6c8" width="12.4" height="2.5" depth="0.2" x="0" y="7.75" z="-7.05"></m-cube>
+  
+    <!-- ROOF BAND - single solid cap -->
+    <m-cube color="#111111" width="12.8" height="1.2" depth="14.6" x="0" y="9.6" z="0"></m-cube>
+  
+    <!-- SPROCKET HOLES - TOP BAND (all 4 sides) -->
+    <!-- Front: 23 holes, 0.5m spacing -->
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-0.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.5" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.0" y="9.6" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.5" y="9.6" z="7.6"></m-cube>
+    <!-- Back: 23 holes, 0.5m spacing -->
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-0.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.5" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.0" y="9.6" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.5" y="9.6" z="-7.55"></m-cube>
+    <!-- Sides: 14 per side, 1.0m spacing -->
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="-0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="-0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="9.6" z="6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="9.6" z="6.5"></m-cube>
+  
+    <!-- BOTTOM FILM STRIP - 4 bars on exterior faces -->
+    <m-cube color="#111111" width="12.8" height="1.2" depth="0.5" x="0" y="7.093" z="7.15"></m-cube>
+    <m-cube color="#111111" width="12.8" height="1.2" depth="0.5" x="0" y="7.093" z="-7.15"></m-cube>
+    <m-cube color="#111111" width="0.5" height="1.2" depth="14.45" x="-6.2" y="7.093" z="0"></m-cube>
+    <m-cube color="#111111" width="0.5" height="1.2" depth="14.45" x="6.2" y="7.093" z="0"></m-cube>
+  
+    <!-- SPROCKET HOLES - BOTTOM BAND (all 4 sides) -->
+    <!-- Front: 23 holes, 0.5m spacing -->
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-0.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.5" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.0" y="7.093" z="7.6"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.5" y="7.093" z="7.6"></m-cube>
+    <!-- Back: 23 holes, 0.5m spacing -->
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-5.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-4.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-3.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-2.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-1.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="-0.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="0.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="1.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="2.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="3.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="4.5" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.0" y="7.093" z="-7.55"></m-cube>
+    <m-cube color="#ffffff" width="0.18" height="0.15" depth="0.1" x="5.5" y="7.093" z="-7.55"></m-cube>
+    <!-- Sides: 14 per side, 1.0m spacing -->
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="-0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="-0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="0.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="1.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="2.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="3.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="4.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="5.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="-6.45" y="7.093" z="6.5"></m-cube>
+    <m-cube color="#ffffff" width="0.15" height="0.15" depth="0.18" x="6.45" y="7.093" z="6.5"></m-cube>
+  
+    <!-- CINEMA SIGN -->
+    <m-image src="https://pub-05a5024e08a241219ad8d5f4d20ee781.r2.dev/CINEMA_LOGO_FINAL.png" width="5" height="1.4" y="8.312" z="7.152" emissive="0.8"></m-image>
+  
+    <!-- NOW SHOWING MARQUEE - image with white backing (pushed forward past lip) -->
+    <m-cube color="#ffffff" width="5.0" height="2.14" depth="0.15" x="0" y="4.1" z="9.15"></m-cube>
+    <m-image src="https://pub-05a5024e08a241219ad8d5f4d20ee781.r2.dev/Maruqee.png" width="5.0" height="2.14" x="0" y="4.1" z="9.25" emissive="0.8"></m-image>
+  
+    <!-- ENTRANCE -->
+    <m-cube color="#8b0000" width="5.5" height="0.15" depth="2.0" x="0" y="3.8" z="8.0"></m-cube>
+    <m-cube color="#660000" width="5.5" height="0.25" depth="0.15" x="0" y="3.75" z="9.0"></m-cube>
+    <m-cube color="#8b0000" width="3.0" height="0.02" depth="5.0" x="0" y="0.11" z="9.161"></m-cube>
+  
+    <!-- INTERIOR FLOOR + CEILING -->
+    <m-cube color="#1a0a0a" width="11.4" height="0.5" depth="13.4" x="0" y="-0.09" z="0"></m-cube>
+    <m-cube color="#0d0d0d" width="11.4" height="0.2" depth="13.4" x="0" y="9.7" z="0"></m-cube>
+  
+    <!-- 3D GLASSES -->
+    <m-group id="rooftop-glasses" x="0" y="11.0" z="8.5" sx="1.8" sy="1.8" sz="1.8">
+      <m-cube color="#111111" width="1.2" height="0.3" depth="0.15" x="0" y="0" z="0"></m-cube>
+      <m-group x="-1.8" y="0" z="0"><m-cube color="#111111" width="2.4" height="1.6" depth="0.2" x="0" y="0" z="0"></m-cube><m-cube color="#00ccff" width="2.0" height="1.2" depth="0.15" x="0" y="0" z="0.05" opacity="0.7"></m-cube></m-group>
+      <m-group x="1.8" y="0" z="0"><m-cube color="#111111" width="2.4" height="1.6" depth="0.2" x="0" y="0" z="0"></m-cube><m-cube color="#ff0000" width="2.0" height="1.2" depth="0.15" x="0" y="0" z="0.05" opacity="0.7"></m-cube></m-group>
+      <m-group x="-3.0" y="0" z="0"><m-cube color="#111111" width="0.15" height="0.4" depth="0.15" x="0" y="0" z="0"></m-cube><m-cube color="#111111" width="0.15" height="0.3" depth="2.5" x="0" y="0" z="-1.35"></m-cube><m-cube color="#111111" width="0.15" height="0.8" depth="0.15" x="0" y="-0.4" z="-2.6"></m-cube></m-group>
+      <m-group x="3.0" y="0" z="0"><m-cube color="#111111" width="0.15" height="0.4" depth="0.15" x="0" y="0" z="0"></m-cube><m-cube color="#111111" width="0.15" height="0.3" depth="2.5" x="0" y="0" z="-1.35"></m-cube><m-cube color="#111111" width="0.15" height="0.8" depth="0.15" x="0" y="-0.4" z="-2.6"></m-cube></m-group>
+    </m-group>
+  
+    <!-- SCREEN -->
+    <m-cube color="#050505" width="11" height="6.2" depth="0.15" x="0" y="4.5" z="-6.7"></m-cube>
+    <m-video src="{{HLS_URL}}" width="10.5" height="5.906" loop="true" x="0" y="4.5" z="-6.6" emissive="15.0"></m-video>
+  
+    <!-- AISLE POINT LIGHTS - warm amber, low to floor, spaced down center aisle -->
+    <m-light type="point" color="#ffaa44" intensity="5" x="0" y="0.3" z="-1" cast-shadow="false"></m-light>
+    <m-light type="point" color="#ffaa44" intensity="5" x="0" y="0.3" z="1" cast-shadow="false"></m-light>
+    <m-light type="point" color="#ffaa44" intensity="5" x="0" y="0.3" z="3" cast-shadow="false"></m-light>
+    <m-light type="point" color="#ffaa44" intensity="5" x="0" y="0.3" z="5" cast-shadow="false"></m-light>
+  
+    <!-- SEATING: 8 rows x 14 (shifted back 2m) -->
+    <m-cube color="#1a0a0a" width="5.1" height="0.2" depth="1.0" x="-3.05" y="0.21" z="-2.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.2" depth="1.0" x="3.05" y="0.21" z="-2.5"></m-cube>
+    <m-group x="-2.95" y="0.25" z="-2.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="0.25" z="-2.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="0.35" depth="1.0" x="-3.05" y="0.28" z="-1.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.35" depth="1.0" x="3.05" y="0.28" z="-1.5"></m-cube>
+    <m-group x="-2.95" y="0.4" z="-1.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="0.4" z="-1.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="0.5" depth="1.0" x="-3.05" y="0.36" z="-0.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.5" depth="1.0" x="3.05" y="0.36" z="-0.5"></m-cube>
+    <m-group x="-2.95" y="0.55" z="-0.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="0.55" z="-0.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="0.65" depth="1.0" x="-3.05" y="0.43" z="0.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.65" depth="1.0" x="3.05" y="0.43" z="0.5"></m-cube>
+    <m-group x="-2.95" y="0.7" z="0.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="0.7" z="0.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="0.8" depth="1.0" x="-3.05" y="0.51" z="1.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.8" depth="1.0" x="3.05" y="0.51" z="1.5"></m-cube>
+    <m-group x="-2.95" y="0.85" z="1.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="0.85" z="1.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="0.95" depth="1.0" x="-3.05" y="0.58" z="2.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="0.95" depth="1.0" x="3.05" y="0.58" z="2.5"></m-cube>
+    <m-group x="-2.95" y="1.0" z="2.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="1.0" z="2.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="1.1" depth="1.0" x="-3.05" y="0.66" z="3.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="1.1" depth="1.0" x="3.05" y="0.66" z="3.5"></m-cube>
+    <m-group x="-2.95" y="1.15" z="3.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="1.15" z="3.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-cube color="#1a0a0a" width="5.1" height="1.25" depth="1.0" x="-3.05" y="0.73" z="4.5"></m-cube>
+    <m-cube color="#1a0a0a" width="5.1" height="1.25" depth="1.0" x="3.05" y="0.73" z="4.5"></m-cube>
+    <m-group x="-2.95" y="1.3" z="4.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+    <m-group x="2.95" y="1.3" z="4.5">
+      <m-group x="-2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="-0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.0"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="0.7"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="1.4"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+      <m-group x="2.1"><m-cube color="#8b0000" width="0.55" height="0.1" depth="0.5" x="0" y="0.3" z="0"></m-cube><m-cube color="#8b0000" width="0.55" height="0.35" depth="0.08" x="0" y="0.475" z="0.22"></m-cube></m-group>
+    </m-group>
+  
+  
+  </m-group>
+  

@@ -15,7 +15,18 @@ const projectRoot = path.resolve(dirname, "..");
 
 // --- Configuration -----------------------------------------------------------
 
-const port = Number.parseInt(process.env.PORT ?? "8080", 10);
+// HTTP port. Port 1935 is reserved for MediaMTX's RTMP listener - Railway
+// sets PORT=1935 when a TCP proxy targeting 1935 is added, so ignore it.
+const requestedPort = Number.parseInt(
+  process.env.HTTP_PORT ?? process.env.PORT ?? "8080",
+  10,
+);
+const port = requestedPort === 1935 ? 8080 : requestedPort;
+if (port !== requestedPort) {
+  console.warn(
+    `[server] PORT=${requestedPort} collides with the RTMP listener - using ${port} for HTTP instead`,
+  );
+}
 
 // Public HTTPS base URL of this service (Railway sets RAILWAY_PUBLIC_DOMAIN).
 const publicUrl = (

@@ -29,7 +29,7 @@ remuxed, not transcoded — resolution and bitrate are controlled entirely by OB
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `PORT` | no (default `8080`) | HTTP port. Railway sets this automatically. |
+| `PORT` / `HTTP_PORT` | no (default `8080`) | HTTP port. If Railway sets `PORT=1935` (it does this after you add the TCP proxy), the server ignores it and uses `8080` — set `HTTP_PORT` to override explicitly. |
 | `PUBLIC_URL` | no | Public HTTPS base URL of the service. Defaults to `https://$RAILWAY_PUBLIC_DOMAIN` on Railway, `http://localhost:8080` locally. |
 | `RTMP_PUBLIC_URL` | yes (on Railway) | Public RTMP ingest address shown on the front page, e.g. `rtmp://shuttle.proxy.rlwy.net:34521` (the Railway TCP proxy endpoint). |
 | `STREAM_KEY` | recommended | Password required to publish. If unset, anyone who can reach the RTMP port can stream. |
@@ -43,6 +43,9 @@ remuxed, not transcoded — resolution and bitrate are controlled entirely by OB
    - **Generate a domain** targeting port `8080` (gives you `https://<app>.up.railway.app`).
    - **Add a TCP Proxy** targeting internal port `1935`. Railway gives you a host and port,
      e.g. `shuttle.proxy.rlwy.net:34521` — this is your RTMP ingest address.
+   - Adding the TCP proxy can flip the service's injected `PORT` variable to `1935`,
+     which would collide with the RTMP listener. The server detects this and falls back
+     to `8080` for HTTP — just make sure the **domain targets port 8080**.
 3. In **Variables**, set:
    - `STREAM_KEY` — pick a long random secret
    - `RTMP_PUBLIC_URL` — `rtmp://<tcp-proxy-host>:<tcp-proxy-port>` from step 2
